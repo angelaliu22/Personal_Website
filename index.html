@@ -6,6 +6,8 @@
    <link href="index.css" rel="stylesheet">
    <link rel="shortcut icon" href="images/myicon.ico">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" type="text/css">
+	<!--FONTS-->
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
 	<!--Google Analytics-->
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -17,14 +19,15 @@
 		ga('send', 'pageview');
 	</script>
 </head>
-<header id="header">
-	<div id="links">
-		<li><a href="index.html">Home</a></li>
-		<li><a href ="index.html#transparent-about">About</a><li>
-		<li><a href="index.html#projects">Projects</a></li> 
-		<li><a href = "index.html#work-experience">Experience</a></li>
-		<li><a href="#index.html#contact">Contact</a></li>
-		<li><a href="resume.html">Resume</a></li>
+<body>
+	<div id="homepage">
+	    <div class = "me" id ="name">
+	   		<h3>ANGELA</h3>
+	   		<h1>LIU</h1>
+	    </div>
+	    <div class = "me" id = "headshot">
+	    	<img src = "images/headshot-circle.png">
+	    </div>
 	</div>
 	<div id = "icons">
 		<div class = "social_icon" id = "linkedin">
@@ -36,58 +39,17 @@
 	    <div class = "social_icon" id = "github">
 	    	<a href = "https://github.com/angelaliu22" target="_blank"><img src = "images/github.png"></a>
 	    </div>
-	    <div class = "social_icon" id = "g+">
-	    	<a href = "https://plus.google.com/+AngelaLiu22/posts" target="_blank"><img src = "images/g+.png"></a>
-	   	</div>
 	   	<div class = "social_icon" id = "vsco">
 	    	<a href="https://angelacliu.vsco.co" target="_blank"> <img src="images/vsco.png"></a>
 	    </div>
+	    <div class = "social_icon" id = "email">
+	    	<a href="mailto:angelaliu22@gmail.com"><img src = "images/email.png"></a>
+	    </div>
 	</div>
-	<div id = "copyright">
-		<p>Copyright &copy 2014 Angela C Liu<br>All rights reserved</p>
-	</div>
-</header>
-<body>
-	<div id="homepage">
-		<div class ="home-container"
-	        data-center="background-position: 50% 0px;"
-	        data-top-bottom="background-position: 50% -100px;"
-	        data-anchor-target="#homepage">
-	        <div class="hsContainer">
-	        	<div class="hsContent">
-		            <div class = "me" id ="name">
-	               		<h3>ANGELA</h3>
-	               		<h1>LIU</h1>	
-		            </div>
-		       	</div>
-	        </div>
-    	</div>
-	</div>
-	<div id = "transparent-about">
- 		<div class ="home-container"
-	        data-center="background-position: 50% 0px;"
-	        data-top-bottom="background-position: 50% -100px;"
-	        data-anchor-target="#homepage">
-	        <div class="hsContainer">
-	        	<div class="hsContent">
-		            <div id ="transparent">
-	               		<h3 id = "hello">
-	               			Hello! 
-	               		</h3>
-	               		<p>
-	               			I am currently a junior Information Systems and Human-Computer Interaction double major student at Carnegie Mellon University. 
-	               		</p>
-	               		<p>
-	               			With a background in development, I understand the systems and constraints that are the foundations of elegant and sophisticated interaction designs. 
-	               		</p>
-	               		<p>
-	               			Feel free to browse my site and get in touch! Thanks for visiting! 
-	               		</p>
-		            </div>
-		       	</div>
-	        </div>
-    	</div>
-	</div>
+	<div id="links">
+		<li><a href="index.html#projects">Experience</a></li> 
+		<li> &nbsp&nbsp | &nbsp&nbsp </li>
+		<li><a href="files/resume.pdf" target = "_blank">Resume</a></li>
 	</div>
 	<div id="projects">
 		<div class = "sectional-container" id ="projects-container">
@@ -110,18 +72,22 @@
   						document.getElementById('enactus').style.borderWidth="1px";
   						document.getElementById('actnet').style.borderColor="black";
   						document.getElementById('actnet').style.borderWidth="1px";
-  						document.getElementById('termproject').style.borderColor="black";
-  						document.getElementById('termproject').style.borderWidth="1px";
   						document.getElementById('magazine').style.borderColor="black";
   						document.getElementById('magazine').style.borderWidth="1px";
   						document.getElementById('hci-research').style.borderColor="black";
   						document.getElementById('hci-research').style.borderWidth="1px";
+  						document.getElementById('cisco').style.borderColor="black";
+  						document.getElementById('cisco').style.borderWidth="1px";
+  						document.getElementById('ooyala').style.borderColor="black";
+  						document.getElementById('ooyala').style.borderWidth="1px";
+
   						//bring all elements back
   						document.getElementById('enactus').style.display="inline-block";
   						document.getElementById('actnet').style.display="inline-block";
-  						document.getElementById('termproject').style.display="inline-block";
   						document.getElementById('magazine').style.display="inline-block";
   						document.getElementById('hci-research').style.display="inline-block";
+  						document.getElementById('cisco').style.display="inline-block";
+  						document.getElementById('ooyala').style.display="inline-block";
 					}
 					function highlightAll() {
 						clearAll();
@@ -134,6 +100,7 @@
   						//make irrelevant ones disappear
   						document.getElementById('magazine').style.display="none";
   						document.getElementById('hci-research').style.display="none";
+  						document.getElementById('ooyala').style.display="none";
 					}
 					function highlightDesign() {
 						clearAll();
@@ -142,8 +109,8 @@
   						//make irrelevant ones disappear
   						document.getElementById('enactus').style.display="none";
   						document.getElementById('actnet').style.display="none";
-  						document.getElementById('termproject').style.display="none";
-    					document.getElementById('hci-research').style.display="none";
+    					document.getElementById('cisco').style.display="none";
+    					document.getElementById('ooyala').style.display="none";
 
   					}
   					function highlightResearch() {
@@ -153,8 +120,9 @@
   						//make irrelevant ones disappear
   						document.getElementById('enactus').style.display="none";
   						document.getElementById('actnet').style.display="none";
-  						document.getElementById('termproject').style.display="none";
   						document.getElementById('magazine').style.display="none";
+  						document.getElementById('ooyala').style.display="none";
+  						document.getElementById('cisco').style.display="none";
   					}
 				</script>
 			</div>
@@ -180,6 +148,13 @@
 						</h3>
 					</a>
 				</div>
+				<div class = "project-boxes" id = "ooyala">
+					<a href = "ooyala.html">
+						<h3 id = "ooyala-h3">
+							My Summer at Ooyala <br> <br><span class = "view">View Internship</span>
+						</h3>
+					</a>
+				</div>
 				<div class = "project-boxes" id = "actnet">
 					<a href = "actnet.html">
 						<h3 id = "actnet-h3">
@@ -187,52 +162,52 @@
 						</h3>
 					</a>
 				</div>
-				<div class = "project-boxes" id = "termproject">
+				<!-- <div class = "project-boxes" id = "termproject">
 					<a href = "112termproject.html">
 						<h3 id = "112-h3">
 							Personal Spotify <br>and Music Visualizer <br> <br><span class = "view">View Project</span>
 						</h3>
 					</a>
-				</div>
-				<div class = "project-boxes" id = "placeholder">
-				</div>
-			</div>
-    	</div>
-	</div>
-	<div id = "work-experience">
-		<div class = "sectional-container" id = "experience-container">
-			<a href = "cisco.html">
+				</div> -->
 				<div class = "project-boxes" id = "cisco">
-					<h3 id = "cisco-h3">
-						Cisco Systems <br> <span class = "work-date">( Spring and Summer 2014 )</span> <br> <br><span class = "view">View Work</span>
-					</h3>
+					<a href = "cisco.html">
+						<h3 id = "cisco-h3">
+							My Co-op at Cisco <br> <br><span class = "view">View Internship</span>
+						</h3>
+					</a>
 				</div>
-			</a>
-			<a href = "ooyala.html">
-				<div class = "project-boxes" id = "ooyala">
-					<h3 id = "ooyala-h3">
-						Ooyala Inc. <br> <span class = "work-date">( Summer 2013 )</span> <br> <br><span class = "view">View Work</span>
-					</h3>
-				</div>
-			</a>
-		</div>
-	</div>
-	<div id="contact">
-		<div class = "sectional-container" id = "contact-container">
-			<h1 id = "contact-header">Let's connect!</h1>
-			<div class = "contact-info" id = "email-form">
-				<h1>Shoot me an email at:</h1>
-				<a href="mailto:angelaliu22@gmail.com?">angelaliu22@gmail.com</a>
-			</div>
+				<!-- <div class = "project-boxes" id = "placeholder">
+				</div> -->
+    		</div>
     	</div>
-	</div> 
-<!-- 	<footer>
-		<p>Copyright &copy 2014 Angela C Liu<br>All rights reserved</p>
-	</footer>
-	<!--Source Scrollr.js---->
+	</div>
+	<!--Source Scrollr.js
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write("<script src="js/vendor/jquery-1.9.1.min.js></script></script>
 	<script src="js/skrollr.js"></script>
-	<script src="index_js.js"></script>
+	<script src="index_js.js"></script>-->
 </body>
+<footer>
+	<!-- <div id = "icons">
+		<div class = "social_icon" id = "linkedin">
+		    <a href="http://www.linkedin.com/profile/view?id=204032301&trk=nav_responsive_tab_profile_pic" target="_blank"><img src = "images/linkedin.png"></a>
+		 </div>
+		 <div class = "social_icon" id = "twitter">	 
+	    	<a href="https://twitter.com/angelaliu22" target="_blank"><img src="images/twitter.png"></a>
+	    </div>
+	    <div class = "social_icon" id = "github">
+	    	<a href = "https://github.com/angelaliu22" target="_blank"><img src = "images/github.png"></a>
+	    </div>
+	   	<div class = "social_icon" id = "vsco">
+	    	<a href="https://angelacliu.vsco.co" target="_blank"> <img src="images/vsco.png"></a>
+	    </div>
+	    <div class = "social_icon" id = "email">
+	    	<a href="mailto:angelaliu22@gmail.com"><img src = "images/email.png"></a>
+	    </div>
+	</div> -->
+	<!-- <li><a href="resume.html">Resume</a></li> -->
+	<div id = "copyright">
+		<p>Copyright &copy 2014 | All rights reserved</p>
+	</div>
+</footer>
 </html>
