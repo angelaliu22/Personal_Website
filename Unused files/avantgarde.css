@@ -1,0 +1,34 @@
+
+#avantgarde-date {
+	width: 20%;
+	height: 100%;
+	position: relative;
+}
+#avantgarde-main-picture-container {
+	width: 60%;
+	height: auto;
+	text-align: center;
+}
+.avantgarde-project-picture img{
+	width: 50%;
+	position: relative;
+}
+
+.avantgarde-project-picture img:hover {
+	cursor: pointer;
+}
+.project-description {
+	clear: both;
+	width: 100%;
+	padding-top: 20px;
+}
+#avantgarde-project-description-container p {
+	font-family: OpenSansLight;
+	font-size: 20px;
+	color: #606060;
+
+}
+#avantgarde-project-description-container a {
+	text-decoration: none;
+	color: #f99926;
+}

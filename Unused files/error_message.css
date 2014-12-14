@@ -1,0 +1,26 @@
+@font-face {
+	font-family: LatoHair;
+	src: url(Fonts/Lato-Hair.ttf);
+}
+@font-face {
+	font-family: OpenSansLight;
+	src: url(Fonts/OpenSans-Light.ttf);
+}
+.message h1 {
+	color: #f99926;
+	text-align: center;
+	font-family: LatoHair;
+	font-size: 60px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.message p,a {
+	color: #606060;
+	font-family: OpenSansLight;
+	font-size: 20px;
+	text-align: center;
+}
+.message a:hover {
+	color: #f99926;
+}

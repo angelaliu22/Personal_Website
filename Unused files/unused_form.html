@@ -1,0 +1,76 @@
+<form action="send_mail.php" method="post">
+	<h1>Shoot me a quick message</h1>
+	<div>
+        <label>Name:</label>
+		<input type="text" name="sender_name" value="">
+    </div>
+    <div>
+        <label>Email:</label>
+		<input type="text" name="email_address" value = "" />
+    </div>
+    <div>
+        <label for="textarea">Message:</label>
+		<textarea name="message" rows = "5" cols = "30"></textarea>
+    </div>
+    
+    <div class="button">
+        <button type="submit">Send!</button>
+    </div>
+</form>
+
+<!-- THE CSS -->
+
+#email-form {
+    float: left;
+    clear: left;
+    padding-bottom: 100px;
+}
+#email-form form {
+    float: left;
+    clear left;
+    text-align: left;
+    padding-left: 50px;
+}
+#email-form div {
+    margin: 0; 
+    padding: 0; 
+    padding-bottom: 1.25em; 
+}
+#email-form h1 {
+    font-family: LatoHair;
+    color: black;
+    font-size: 25px;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+#email-form label {
+    font-family: LatoHair;
+    margin: 0; 
+    margin-right: 10px;
+    padding: 0; 
+    display: block; 
+    font-size: 100%; 
+    padding: 2px;
+    width: 6em; 
+    text-align: right; 
+    float: left; 
+    clear: left;
+}
+#email-form input, textarea {
+    margin: 0; 
+    padding: 8px; 
+    display: block; 
+    font-size: 100%;
+}
+input:active, input:focus, input:hover, 
+textarea:active, textarea:focus, textarea:hover { 
+  border-color: #f99926; 
+} 
+#email-form button {
+    font-family: Lato;
+    display: inline-block;
+    padding: 10px;
+    float: left;
+    margin-left: 110px;
+}

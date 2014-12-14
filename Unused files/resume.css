@@ -1,0 +1,17 @@
+@font-face {
+	font-family: Lane;
+	src: url(Fonts/Lane.ttf);
+}
+#resume-info {
+	text-align: center;
+	padding: 20px;
+}
+#resume-info a {
+	font-family: Lane;
+	font-size: 20px;
+	text-decoration: none;
+}
+#resume-info img {
+	width: 90%;
+	height: auto;
+}

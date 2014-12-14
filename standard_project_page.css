@@ -1,0 +1,111 @@
+
+body {
+	width: 100%;
+}
+header {
+	width: auto;
+}
+header .goback {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+}
+header .back-button {
+	width: auto;
+}
+header .back-button div {
+	opacity: 0.5;
+}
+header .back-button:hover{
+	opacity: 1;
+}
+header .back-button h1{
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	margin-left: -10px;
+}
+header .back-button img{
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.project-body {
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: -60px;
+}
+.main-picture {
+	height: auto;
+	width: 100%;
+	margin: 0 auto;
+}
+.project-info {
+    position:relative;
+    overflow:hidden;
+    text-align: center;
+}
+.project-info h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	color: #f99926;
+	text-align: center;
+	font-size: 30px;
+}
+.project-info h2 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	color: #f99926;
+	opacity: 0.6;
+	text-align: center;
+	font-size: 18px;
+	margin-top: -10px;
+}
+.project-info ul {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: white;
+	opacity: 0.6;
+	text-align: center;
+	font-size: 18px;
+}
+.project-info li {
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+}
+.project-info img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.project-description {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: white;
+	opacity: 0.8;
+	font-size: 18px;
+	width: 100%;
+}
+.project-description-container {
+	width: 60%;
+	text-align: center;
+}
+.project-description img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.project-description a {
+	color: #f99926;
+	text-decoration: none;
+}
+.work-samples img{
+	width: 100%;
+}

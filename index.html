@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title> Angela Liu </title>
+   <link href="index.css" rel="stylesheet">
+   <link rel="shortcut icon" href="images/myicon.ico">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" type="text/css">
+	<!--Google Analytics-->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-54984819-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+<header id="header">
+	<div id="links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href ="index.html#transparent-about">About</a><li>
+		<li><a href="index.html#projects">Projects</a></li> 
+		<li><a href = "index.html#work-experience">Experience</a></li>
+		<li><a href="#index.html#contact">Contact</a></li>
+		<li><a href="resume.html">Resume</a></li>
+	</div>
+	<div id = "icons">
+		<div class = "social_icon" id = "linkedin">
+		    <a href="http://www.linkedin.com/profile/view?id=204032301&trk=nav_responsive_tab_profile_pic" target="_blank"><img src = "images/linkedin.png"></a>
+		 </div>
+		 <div class = "social_icon" id = "twitter">	 
+	    	<a href="https://twitter.com/angelaliu22" target="_blank"><img src="images/twitter.png"></a>
+	    </div>
+	    <div class = "social_icon" id = "github">
+	    	<a href = "https://github.com/angelaliu22" target="_blank"><img src = "images/github.png"></a>
+	    </div>
+	    <div class = "social_icon" id = "g+">
+	    	<a href = "https://plus.google.com/+AngelaLiu22/posts" target="_blank"><img src = "images/g+.png"></a>
+	   	</div>
+	   	<div class = "social_icon" id = "vsco">
+	    	<a href="https://angelacliu.vsco.co" target="_blank"> <img src="images/vsco.png"></a>
+	    </div>
+	</div>
+	<div id = "copyright">
+		<p>Copyright &copy 2014 Angela C Liu<br>All rights reserved</p>
+	</div>
+</header>
+<body>
+	<div id="homepage">
+		<div class ="home-container"
+	        data-center="background-position: 50% 0px;"
+	        data-top-bottom="background-position: 50% -100px;"
+	        data-anchor-target="#homepage">
+	        <div class="hsContainer">
+	        	<div class="hsContent">
+		            <div class = "me" id ="name">
+	               		<h3>ANGELA</h3>
+	               		<h1>LIU</h1>	
+		            </div>
+		       	</div>
+	        </div>
+    	</div>
+	</div>
+	<div id = "transparent-about">
+ 		<div class ="home-container"
+	        data-center="background-position: 50% 0px;"
+	        data-top-bottom="background-position: 50% -100px;"
+	        data-anchor-target="#homepage">
+	        <div class="hsContainer">
+	        	<div class="hsContent">
+		            <div id ="transparent">
+	               		<h3 id = "hello">
+	               			Hello! 
+	               		</h3>
+	               		<p>
+	               			I am currently a junior Information Systems and Human-Computer Interaction double major student at Carnegie Mellon University. 
+	               		</p>
+	               		<p>
+	               			With a background in development, I understand the systems and constraints that are the foundations of elegant and sophisticated interaction designs. 
+	               		</p>
+	               		<p>
+	               			Feel free to browse my site and get in touch! Thanks for visiting! 
+	               		</p>
+		            </div>
+		       	</div>
+	        </div>
+    	</div>
+	</div>
+	</div>
+	<div id="projects">
+		<div class = "sectional-container" id ="projects-container">
+			<div class = "project-buttons-container">
+				<div class = "project-buttons">
+					<button type="button" id = "All-button" onclick = "highlightAll()">All</button>
+					<button type="button" id = "Development-button" onclick = "highlightDevelopment()">Development</button>
+					<button type="button" id = "Design-button" onclick = "highlightDesign()">Design</button>
+					<button type="button" id = "Research-button" onclick = "highlightResearch()">Research</button>
+				</div>
+				<script>
+					function clearAll() {
+						//clear everything 
+						document.getElementById('All-button').style.border='none';
+						document.getElementById('Development-button').style.border='none';
+  						document.getElementById('Design-button').style.border='none';
+  						document.getElementById('Research-button').style.border='none';
+  						//standard settings
+  						document.getElementById('enactus').style.borderColor="black";
+  						document.getElementById('enactus').style.borderWidth="1px";
+  						document.getElementById('actnet').style.borderColor="black";
+  						document.getElementById('actnet').style.borderWidth="1px";
+  						document.getElementById('termproject').style.borderColor="black";
+  						document.getElementById('termproject').style.borderWidth="1px";
+  						document.getElementById('magazine').style.borderColor="black";
+  						document.getElementById('magazine').style.borderWidth="1px";
+  						document.getElementById('hci-research').style.borderColor="black";
+  						document.getElementById('hci-research').style.borderWidth="1px";
+  						//bring all elements back
+  						document.getElementById('enactus').style.display="inline-block";
+  						document.getElementById('actnet').style.display="inline-block";
+  						document.getElementById('termproject').style.display="inline-block";
+  						document.getElementById('magazine').style.display="inline-block";
+  						document.getElementById('hci-research').style.display="inline-block";
+					}
+					function highlightAll() {
+						clearAll();
+  						document.getElementById("All-button").style.borderBottom="3px solid #f99926";
+					}
+					function highlightDevelopment() {
+						clearAll();
+						//orange border for button
+  						document.getElementById("Development-button").style.borderBottom="3px solid #f99926";
+  						//make irrelevant ones disappear
+  						document.getElementById('magazine').style.display="none";
+  						document.getElementById('hci-research').style.display="none";
+					}
+					function highlightDesign() {
+						clearAll();
+						//orange border for button
+  						document.getElementById("Design-button").style.borderBottom="3px solid #f99926";
+  						//make irrelevant ones disappear
+  						document.getElementById('enactus').style.display="none";
+  						document.getElementById('actnet').style.display="none";
+  						document.getElementById('termproject').style.display="none";
+    					document.getElementById('hci-research').style.display="none";
+
+  					}
+  					function highlightResearch() {
+						clearAll();
+						//orange border for button
+  						document.getElementById("Research-button").style.borderBottom="3px solid #f99926";
+  						//make irrelevant ones disappear
+  						document.getElementById('enactus').style.display="none";
+  						document.getElementById('actnet').style.display="none";
+  						document.getElementById('termproject').style.display="none";
+  						document.getElementById('magazine').style.display="none";
+  					}
+				</script>
+			</div>
+			<div class = "project-type">
+				<div class = "project-boxes" id = "enactus">
+					<a href = "enactus.html">
+						<h3 id = "enactus-h3">
+							Carnegie Mellon Enactus <br> <br><span class = "view">View Project</span>
+						</h3>
+					</a>
+				</div>
+				<div class = "project-boxes" id = "hci-research">
+					<a href = "IdeaGens.html">
+						<h3 id = "research-h3">
+							IdeaGens <br> <br><span class = "view">View Project</span>
+						</h3>
+					</a>
+				</div>
+				<div class = "project-boxes" id = "magazine">
+					<a href = "unbounded.html">
+						<h3 id = "magazine-h3">
+							Unbounded <br> <br><span class = "view">View Project</span>
+						</h3>
+					</a>
+				</div>
+				<div class = "project-boxes" id = "actnet">
+					<a href = "actnet.html">
+						<h3 id = "actnet-h3">
+							Actnet Advanced Corporation <br> <br><span class = "view">View Project</span>
+						</h3>
+					</a>
+				</div>
+				<div class = "project-boxes" id = "termproject">
+					<a href = "112termproject.html">
+						<h3 id = "112-h3">
+							Personal Spotify <br>and Music Visualizer <br> <br><span class = "view">View Project</span>
+						</h3>
+					</a>
+				</div>
+				<div class = "project-boxes" id = "placeholder">
+				</div>
+			</div>
+    	</div>
+	</div>
+	<div id = "work-experience">
+		<div class = "sectional-container" id = "experience-container">
+			<a href = "cisco.html">
+				<div class = "project-boxes" id = "cisco">
+					<h3 id = "cisco-h3">
+						Cisco Systems <br> <span class = "work-date">( Spring and Summer 2014 )</span> <br> <br><span class = "view">View Work</span>
+					</h3>
+				</div>
+			</a>
+			<a href = "ooyala.html">
+				<div class = "project-boxes" id = "ooyala">
+					<h3 id = "ooyala-h3">
+						Ooyala Inc. <br> <span class = "work-date">( Summer 2013 )</span> <br> <br><span class = "view">View Work</span>
+					</h3>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div id="contact">
+		<div class = "sectional-container" id = "contact-container">
+			<h1 id = "contact-header">Let's connect!</h1>
+			<div class = "contact-info" id = "email-form">
+				<h1>Shoot me an email at:</h1>
+				<a href="mailto:angelaliu22@gmail.com?">angelaliu22@gmail.com</a>
+			</div>
+    	</div>
+	</div> 
+<!-- 	<footer>
+		<p>Copyright &copy 2014 Angela C Liu<br>All rights reserved</p>
+	</footer>
+	<!--Source Scrollr.js---->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write("<script src="js/vendor/jquery-1.9.1.min.js></script></script>
+	<script src="js/skrollr.js"></script>
+	<script src="index_js.js"></script>
+</body>
+</html>
