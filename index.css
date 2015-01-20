@@ -1,3 +1,24 @@
+/*CSS RESET TAKEN FROM: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+
 html, body {
 	overflow-x: hidden;
 }
@@ -10,6 +31,63 @@ body {
 	right: 0;
 	height: 100%;
 	width: 100%;
+	font-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+#homepage {
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
+}
+#name {
+	color: black;
+   	position: absolute;
+   	top: 20%;
+   	left: 5%;
+	margin: 0 auto;
+	height: auto;
+	width: 50%;
+	float: left;
+}
+
+#name h1 {
+	color: rgba(250,250,250,0.6);
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-size: 8em;
+    margin: 0 auto;
+}
+#headshot {
+	position: absolute;
+   	top: 8%;
+   	left: 38%;
+}
+#headshot img{
+	max-width: 70%;
+	float: right;
+}
+#icons {
+	position: relative;
+	text-align: center;
+	position: absolute;
+	bottom: 7.5em; /*120px*/
+	left: 0;
+	right: 0;
+}
+.social_icon {
+	display: inline-block;
+	position: relative;
+  	top: 30%;
+  	padding-left: 0.625em; /*10px */
+	padding-right: 0.625em;
+}
+.social_icon img{
+	height:auto; 
+	width:auto; 
+	max-width: 3.125em; /*50px*/
+	max-height: 3.125em;
+	border-radius: 6.25em; /*100px*/
 }
 #links {
 	padding-top: 50px;
@@ -17,14 +95,14 @@ body {
     text-transform: uppercase;
     height: auto;
     position: absolute;
-    bottom: 30px;
+    bottom: 1.875em; /*30px*/
     left: 0;
     right: 0;
 }
 
 #links li {
 	display: inline-block;
-	font-size: 18px; 
+	font-size: 1.2em; 
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
     text-align: center;
@@ -34,71 +112,14 @@ body {
 	text-decoration: none;
 	color: #f99926;
 	opacity:0.6;
+    transition: 0.3s linear all;
 }
 
 #links a:hover { 
 	color: #f99926; 
 	opacity: 1;  
 	cursor: pointer;
-}
-
-#homepage {
-	height: 100%;
-	width: 80%;
-	margin: 0 auto;
-}
-/*.home-container {
-	background-image: url("images/headshot-circle.png");
-	background-position: right;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    height: 850px;
-    width: 100%;
-    padding-right: 100px;
-}
-.hsContainer {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-.hsContent {
-	width: 100%;
-	height: 100%;
-	margin-top: 30%;
-	margin-left: 5%;
-}*/
-#name {
-	color: black;
-   	position: absolute;
-   	top: 20%;
-   	left: 5%;
-	margin: 0 auto;
-	height: auto;
-	width: 50%;
-}
-#name h3 {
-	color: rgba(250,250,250,0.6);
-	text-align: center;
-	font-family: 'Lato', sans-serif;
-	font-weight: 100;
-    margin: 0 auto;
-	font-size: 120px;
-}
-
-#name h1 {
-	color: rgba(250,250,250,0.6);
-	text-align: center;
-	font-family: 'Lato', sans-serif;
-	font-weight: 100;
-	font-size: 120px;
-    margin: 0 auto;
-}
-#headshot img{
-	max-width: 50%;
-	float: right;
-	clear: right;
+    transition: 0.3s linear all;
 }
 #projects{
 	width: 100%;
@@ -112,10 +133,10 @@ body {
 	margin: 0 auto;
 }
 .project-buttons-container {
-	padding-bottom: 50px;
 	padding-top: 50px;
 	width: 100%;
 	margin: 0 auto;
+	padding-bottom: 50px;
 }
 .project-buttons button{
 	margin-right: 10px;
@@ -126,7 +147,8 @@ body {
 	background-color: transparent;
 	color: rgba(250,250,250,0.8);
 	font-family: 'Lato', sans-serif;
-	font-weight: 400;
+	font-weight: 300;
+	font-size: 1em;
 }
 #All-button {
 	border-bottom: 3px solid #f99926;
@@ -159,10 +181,17 @@ body {
 	background-position: center center;
 	margin-right: -5px;
 }
+.view {
+	font-size: 0.8em;
+	color: #f99926;
+	height: 250px;
+	width: 300px;
+}
+
 .project-boxes h3 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;
-	font-size: 16px;
+	font-size: 1em;
 	color: white;
 	opacity: 0;
 	position: absolute;
@@ -175,17 +204,13 @@ body {
 	width: 100%;
 	text-align: center;
 	padding-top: 60%;
-}
-.view {
-	font-size: 13px;
-	color: #f99926;
-	height: 250px;
-	width: 300px;
+    transition: 0.3s linear all;
 }
 
 .project-boxes h3:hover {
-	background: rgba(0,0,0,0.9);
+	background: rgba(0,0,0,0.95);
 	opacity: 1;
+    transition: 0.3s linear all;
 }
 #enactus {
 	background-image: url("images/enactus-homepage.png");
@@ -221,40 +246,115 @@ body {
 	background-repeat: no-repeat;
 }
 .work-date {
-	font-size: 13px;
+	font-size: 0.8em;
 }
-#icons {
-	position: relative;
-	text-align: center;
-	position: absolute;
-	bottom: 120px;
-	left: 0;
-	right: 0;
-}
-
-.social_icon {
-	display: inline-block;
-	position: relative;
-  	top: 30%;
-  	padding-left: 10px;
-	padding-right: 10px;
-}
-.social_icon img{
-	height:auto; 
-	width:auto; 
-	max-width: 50px; 
-	max-height: 50px;
-	border-radius: 100px;
-}
-
 #copyright {
 	width: auto;
 	height: 10%;
 	text-align: center;
+	padding-bottom: 0.3125em; /*5px*/
+	padding-top: 3.125em;
 }
 #copyright p {
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;	
-	font-size: 12px;
+	font-size: 0.8em;
 	color: #f99926;
+}
+
+
+/*MOBILE OPTIMIZE */
+@media only screen and (max-device-width: 560px) {
+	body { 
+		font-size:90%;
+	}
+	#name {
+		position: absolute;
+		top: 15%;
+		left: 25%;
+	}
+	#headshot {
+		position: absolute;
+		top: 35%;
+		left: 2%;
+	}
+	.social_icon img {
+		max-width: 6em;
+		max-height: 6em;
+	} 
+	#links {
+		padding-bottom: 1em;
+	}
+	#links li {
+		display: inline-block;
+		font-size: 2em; 
+	}
+	.project-buttons-container {
+		display: none;
+	}
+	#projects {
+		height: auto;
+	}
+	#copyright p {
+		color: white;
+		font-size: 1.5em;
+	}
+}
+@media only screen and (orientation: landscape) and (max-device-width: 800px) {
+	body { 
+		font-size:80%;
+	}
+	#name {
+		position: absolute;
+	   	top: 20%;
+	   	left: 5%;
+		margin: 0 auto;
+		height: auto;
+		width: 50%;
+		float: left;
+	}
+	#name h1 {
+		font-size: 8em;
+	}
+	#headshot {
+	position: absolute;
+   	top: 8%;
+   	left: 18%;
+}
+	#headshot img{
+		max-width: 46%;
+	}
+	#icons {
+		position: relative;
+		text-align: center;
+		position: absolute;
+		bottom: 7.5em;
+		left: 0;
+		right: 0;
+	}
+	.social_icon img {
+		max-width: 4em;
+		max-height: 4em;
+	} 
+	#links {
+		padding-bottom: 1em;
+		position: absolute;
+		bottom: 2.5em;
+		left: 0;
+		right: 0;
+	}
+	#links li {
+		display: inline-block;
+		font-size: 2em; 
+	}
+	.project-buttons-container {
+		display: none;
+	}
+	#projects {
+		height: auto;
+	}
+	#copyright p {
+		color: white;
+		font-size: 1.5em;
+	}
 }
