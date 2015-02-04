@@ -1,7 +1,6 @@
 $("#Experience-link").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#copyright").offset().top
-    }, 1000);
+//    $('html, body').animate({ scrollTop: 500}, 500);
+//    $("#Experience-link").css({"border-bottom": "3px solid #f99926"});
 });
 
 function clearAll() {
@@ -23,6 +22,10 @@ function clearAll() {
     $('#cisco').css({"border-width": "1px"});
     $('#ooyala').css({"border-color": "black"});
     $('#ooyala').css({"border-width": "1px"});
+    $('#IxDS-control-redesign').css({"border-color": "black"});
+    $('#IxDS-control-redesign').css({"border-width": "1px"});
+    $('#fbi-redesign').css({"border-color": "black"});
+    $('#fbi-redesign').css({"border-width": "1px"});
 
     //bring all elements back
     $('#enactus').css({display: "inline-block"});
@@ -31,6 +34,8 @@ function clearAll() {
     $('#hci-research').css({display: "inline-block"});
     $('#cisco').css({display: "inline-block"});
     $('#ooyala').css({display: "inline-block"});
+    $('#IxDS-control-redesign').css({display: "inline-block"});
+    $('#fbi-redesign').css({display: "inline-block"});
 }
 
 $("#All-button").click(function() {
@@ -40,13 +45,14 @@ $("#All-button").click(function() {
 
 $("#Development-button").click(function() {    
     clearAll()
-
     //orange border for button
     $("#Development-button").css({"border-bottom": "3px solid #f99926"});
     //make irrelevant ones disappear
     $('#magazine').css({display: "none"});
     $('#hci-research').css({display: "none"});
     $('#ooyala').css({display: "none"});
+    $('#IxDS-control-redesign').css({display: "none"});
+    $('#fbi-redesign').css({display: "none"});
 });
 
 $("#Design-button").click(function() {   
@@ -71,5 +77,7 @@ $("#Research-button").click(function() {
     $('#magazine').css({display: "none"});
     $('#ooyala').css({display: "none"});
     $('#cisco').css({display: "none"});
+    $('#IxDS-control-redesign').css({display: "none"});
+    $('#fbi-redesign').css({display: "none"});
 });
 
