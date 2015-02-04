@@ -259,18 +259,11 @@ body {
 .work-date {
 	font-size: 0.8em;
 }
-footer {
-    position: relative;
-}
 #copyright {
 	width: auto;
 	height: 10%;
 	text-align: center;
-	padding-bottom: 0.3125em; /*5px*/
 	padding-top: 3.125em;
-    position: absolute;
-    bottom: 0;
-    left: 40%;
 }
 #copyright p {
 	font-family: 'Lato', sans-serif;
