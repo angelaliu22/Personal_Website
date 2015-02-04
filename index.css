@@ -204,13 +204,13 @@ body {
 	width: 100%;
 	text-align: center;
 	padding-top: 60%;
-    transition: 0.3s linear all;
+    transition: 0.5s linear all;
 }
 
 .project-boxes h3:hover {
 	background: rgba(0,0,0,0.95);
 	opacity: 1;
-    transition: 0.3s linear all;
+    transition: 0.1s linear all;
 }
 #enactus {
 	background-image: url("images/enactus-homepage.png");

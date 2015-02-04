@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
    <title> Angela Liu </title>
    <link href="index.css" rel="stylesheet">
    <link rel="shortcut icon" href="images/myicon.ico">
@@ -19,7 +19,8 @@
 		ga('create', 'UA-54984819-1', 'auto');
 		ga('send', 'pageview');
 	</script>
-	<!--Scrolling -->
+<!--
+	Scrolling 
 	<script src="http:/	/ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
 	<script src="jquery.localscroll.js" type="text/javascript"></script> 
 	<script src="jquery.scrollTo.js" type="text/javascript"></script>
@@ -28,6 +29,7 @@
 	   		$('#links').localScroll({duration:800 target: "#linkexperience"});
 		});
 	</script>
+-->
 </head>
 <body>
 	<div id="homepage">
@@ -58,86 +60,22 @@
 	</div>
 	<div id="links">
         <li><a href = "about.html">About</a></li>
+        <button id = "Experience-link">BUTTON TO SCROLL</button>
         <li> &nbsp&nbsp | &nbsp&nbsp </li>
-		<li><a href = "#linkexperience">Experience</a></li>
+		<li><a href = "#">Experience</a></li>
 		<li> &nbsp&nbsp | &nbsp&nbsp </li>
 		<li><a href="files/resume.pdf" target = "_blank">Resume</a></li>
 	</div>
 	<div id="projects">
-		<a name = "linkexperience"></a>
+		<a id = "linkexperience"></a>
 		<div class = "sectional-container" id ="projects-container">
 			<div class = "project-buttons-container">
 				<div class = "project-buttons">
-					<button type="button" id = "All-button" onclick = "highlightAll()">All</button>
-					<button type="button" id = "Development-button" onclick = "highlightDevelopment()">Development</button>
-					<button type="button" id = "Design-button" onclick = "highlightDesign()">Design</button>
-					<button type="button" id = "Research-button" onclick = "highlightResearch()">Research</button>
+					<button type="button" id = "All-button">All</button>
+					<button type="button" id = "Development-button">Development</button>
+					<button type="button" id = "Design-button">Design</button>
+					<button type="button" id = "Research-button">Research</button>
 				</div>
-				<script>
-					function clearAll() {
-						//clear everything 
-						document.getElementById('All-button').style.border='none';
-						document.getElementById('Development-button').style.border='none';
-  						document.getElementById('Design-button').style.border='none';
-  						document.getElementById('Research-button').style.border='none';
-  						//standard settings
-  						document.getElementById('enactus').style.borderColor="black";
-  						document.getElementById('enactus').style.borderWidth="1px";
-  						document.getElementById('actnet').style.borderColor="black";
-  						document.getElementById('actnet').style.borderWidth="1px";
-  						document.getElementById('magazine').style.borderColor="black";
-  						document.getElementById('magazine').style.borderWidth="1px";
-  						document.getElementById('hci-research').style.borderColor="black";
-  						document.getElementById('hci-research').style.borderWidth="1px";
-  						document.getElementById('cisco').style.borderColor="black";
-  						document.getElementById('cisco').style.borderWidth="1px";
-  						document.getElementById('ooyala').style.borderColor="black";
-  						document.getElementById('ooyala').style.borderWidth="1px";
-
-  						//bring all elements back
-  						document.getElementById('enactus').style.display="inline-block";
-  						document.getElementById('actnet').style.display="inline-block";
-  						document.getElementById('magazine').style.display="inline-block";
-  						document.getElementById('hci-research').style.display="inline-block";
-  						document.getElementById('cisco').style.display="inline-block";
-  						document.getElementById('ooyala').style.display="inline-block";
-					}
-					function highlightAll() {
-						clearAll();
-  						document.getElementById("All-button").style.borderBottom="3px solid #f99926";
-					}
-					function highlightDevelopment() {
-						clearAll();
-						//orange border for button
-  						document.getElementById("Development-button").style.borderBottom="3px solid #f99926";
-  						//make irrelevant ones disappear
-  						document.getElementById('magazine').style.display="none";
-  						document.getElementById('hci-research').style.display="none";
-  						document.getElementById('ooyala').style.display="none";
-					}
-					function highlightDesign() {
-						clearAll();
-						//orange border for button
-  						document.getElementById("Design-button").style.borderBottom="3px solid #f99926";
-  						//make irrelevant ones disappear
-  						document.getElementById('enactus').style.display="none";
-  						document.getElementById('actnet').style.display="none";
-    					document.getElementById('cisco').style.display="none";
-    					document.getElementById('ooyala').style.display="none";
-
-  					}
-  					function highlightResearch() {
-						clearAll();
-						//orange border for button
-  						document.getElementById("Research-button").style.borderBottom="3px solid #f99926";
-  						//make irrelevant ones disappear
-  						document.getElementById('enactus').style.display="none";
-  						document.getElementById('actnet').style.display="none";
-  						document.getElementById('magazine').style.display="none";
-  						document.getElementById('ooyala').style.display="none";
-  						document.getElementById('cisco').style.display="none";
-  					}
-				</script>
 			</div>
 			<div class = "project-type">
 				<div class = "project-boxes" id = "enactus">
@@ -195,10 +133,10 @@
     	</div>
 	</div>
 	<!--Source Scrollr.js
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write("<script src="js/vendor/jquery-1.9.1.min.js></script></script>
-	<script src="js/skrollr.js"></script>
-	<script src="index_js.js"></script>-->
+	<script src="js/skrollr.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 <footer>
 	<div id = "copyright">
