@@ -1,23 +1,57 @@
-/*CSS RESET TAKEN FROM: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/*/
+/* CSS RESET!! 
+
+    http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
 	font-size: 100%;
-	font-family: inherit;
+	font: inherit;
 	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/*********************************************
+***************CUSTOM CODE********************
+**********************************************/
 
 html, body {
 	overflow-x: hidden;
@@ -27,83 +61,77 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: rgba(18,22,30, 1);
-	position: absolute;
+    background-color: white;
 	right: 0;
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
     font-family: 'Lato', sans-serif;
+    position: absolute;
 }
-#homepage {
-	height: 100%;
-	width: 80%;
-	margin: 0 auto;
+.clear {
+    clear: both;
+}
+#above-fold {
+    height: 100%;
+    width: 100%;
+}
+#left-side {
+    width: 49%;
+    height: 100%;
+    float: left;
+    position: relative;
 }
 #name {
-	color: black;
-   	position: absolute;
-   	top: 20%;
-   	left: 5%;
+    position: absolute;
+    top: 0;
 	margin: 0 auto;
-	height: auto;
-	width: 50%;
-	float: left;
+    height: 100%;
+	width: 100%;
 }
-
 #name h1 {
 	color: rgba(250,250,250,0.6);
-	text-align: center;
-	font-family: 'Lato', sans-serif;
+    color: rgba(18,22,30, 1);
+	text-align: right;
 	font-weight: 100;
-	font-size: 8em;
+	font-size: 5em;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
     margin: 0 auto;
 }
-#headshot {
-	position: absolute;
-   	top: 8%;
-   	left: 38%;
-}
-#headshot img{
-	max-width: 70%;
-	float: right;
-}
-#icons {
-	position: relative;
-	text-align: center;
-	position: absolute;
-	bottom: 7.5em; /*120px*/
-	left: 0;
-	right: 0;
-}
-.social_icon {
-	display: inline-block;
-	position: relative;
-  	top: 30%;
-  	padding-left: 0.625em; /*10px */
-	padding-right: 0.625em;
-}
-.social_icon img{
-	height:auto; 
-	width:auto; 
-	max-width: 3.125em; /*50px*/
-	max-height: 3.125em;
-	border-radius: 6.25em; /*100px*/
+#name p {
+    background-color: #f99926;
+    color: rgba(250,250,250,0.6);
+    color: white;
+	text-align: right;
+	font-weight: 100;
+	font-size: 1.2em;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    padding-top: 0.6em;
+    padding-left: 9em;
+    padding-right: 0.6em;
+    padding-bottom: 0.6em;
 }
 #links {
-	padding-top: 50px;
-	text-align: center;
+	text-align: right;
     text-transform: uppercase;
     height: auto;
     position: absolute;
-    bottom: 1.875em; /*30px*/
-    left: 0;
+    top: 55%;
     right: 0;
+    padding-top: 0.6em;
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    padding-bottom: 0.6em;
 }
 
 #links li {
 	display: inline-block;
 	font-size: 1.2em; 
-	font-family: 'Lato', sans-serif;
 	font-weight: 300;
     text-align: center;
     color: rgba(250,250,250,0.6);
@@ -121,12 +149,47 @@ body {
 	cursor: pointer;
     transition: 0.3s linear all;
 }
+#icons {
+	text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 47%;
+	margin: 0 auto;
+}
+.social_icon {
+	display: inline-block;
+	position: relative;
+  	top: 30%;
+  	padding-left: 0.625em;
+	padding-right: 0.625em;
+}
+.social_icon img{
+	max-width: 2em; 
+	max-height: 2em;
+    opacity: 0.6;
+    transition: 0.5s linear all;
+}
+.social_icon img:hover{
+    opacity: 1;
+    transition: 0.5s linear all;
+}
+#social {
+    float: right;
+    width: 49%;
+    height: 100%;
+    position: relative;
+}
 #projects{
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	z-index: 10;
+	z-index: 30;
     padding-bottom: 10em;
+/*
+    position: relative;
+    top: 15%;
+*/
 }
 #projects-container {
 	width: 80%;
@@ -147,8 +210,8 @@ body {
 	border: none;
 	background-color: transparent;
 	color: rgba(250,250,250,0.8);
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
+    color: black;
+    font-weight: 300;
 	font-size: 1em;
 }
 #All-button {
@@ -181,6 +244,8 @@ body {
    	background-size: cover;
 	background-position: center center;
 	margin-right: -5px;
+    margin: 0.5em;
+    border-radius: 4px;
 }
 .view {
 	font-size: 0.8em;
@@ -190,7 +255,6 @@ body {
 }
 
 .project-boxes h3 {
-	font-family: 'Lato', sans-serif;
 	font-weight: 100;
 	font-size: 1em;
 	color: white;
@@ -264,9 +328,10 @@ body {
 	height: 10%;
 	text-align: center;
 	padding-top: 3.125em;
+    position: relative;
+    bottom: 1em;
 }
 #copyright p {
-	font-family: 'Lato', sans-serif;
 	font-weight: 100;	
 	font-size: 0.8em;
 	color: #f99926;

@@ -26,6 +26,8 @@ function clearAll() {
     $('#IxDS-control-redesign').css({"border-width": "1px"});
     $('#fbi-redesign').css({"border-color": "black"});
     $('#fbi-redesign').css({"border-width": "1px"});
+    $('#termproject').css({"border-color": "black"});
+    $('#termproject').css({"border-width": "1px"});
 
     //bring all elements back
     $('#enactus').css({display: "inline-block"});
@@ -36,6 +38,7 @@ function clearAll() {
     $('#ooyala').css({display: "inline-block"});
     $('#IxDS-control-redesign').css({display: "inline-block"});
     $('#fbi-redesign').css({display: "inline-block"});
+    $('#termproject').css({display: "inline-block"});
 }
 
 $("#All-button").click(function() {
@@ -64,20 +67,22 @@ $("#Design-button").click(function() {
     $('#actnet').css({display: "none"});
     $('#cisco').css({display: "none"});
     $('#ooyala').css({display: "none"});
+    $('#termproject').css({display: "none"});
 
 });
 
-$("#Research-button").click(function() {    
-    clearAll();
-    //orange border for button
-    $("#Research-button").css({"border-bottom": "3px solid #f99926"});
-    //make irrelevant ones disappear
-    $('#enactus').css({display: "none"});
-    $('#actnet').css({display: "none"});
-    $('#magazine').css({display: "none"});
-    $('#ooyala').css({display: "none"});
-    $('#cisco').css({display: "none"});
-    $('#IxDS-control-redesign').css({display: "none"});
-    $('#fbi-redesign').css({display: "none"});
-});
+//$("#Research-button").click(function() {    
+//    clearAll();
+//    //orange border for button
+//    $("#Research-button").css({"border-bottom": "3px solid #f99926"});
+//    //make irrelevant ones disappear
+//    $('#enactus').css({display: "none"});
+//    $('#actnet').css({display: "none"});
+//    $('#magazine').css({display: "none"});
+//    $('#ooyala').css({display: "none"});
+//    $('#cisco').css({display: "none"});
+//    $('#IxDS-control-redesign').css({display: "none"});
+//    $('#fbi-redesign').css({display: "none"});
+//    $('#termproject').css({display: "none"});
+//});
 
