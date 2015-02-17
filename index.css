@@ -25,7 +25,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -57,6 +56,7 @@ html, body {
 	overflow-x: hidden;
 }
 
+
 body {
 	margin: 0;
 	padding: 0;
@@ -67,13 +67,14 @@ body {
 	width: 100%;
 	font-size: 100%;
     font-family: 'Lato', sans-serif;
-    position: absolute;
 }
+
 .clear {
     clear: both;
 }
+
 #above-fold {
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 #left-side {
@@ -183,16 +184,26 @@ body {
     opacity: 1;
     transition: 0.3s linear all;
 }
+.down-arrow {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.down-arrow img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
 #projects{
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
 	z-index: 30;
     padding-bottom: 10em;
-/*
-    position: relative;
-    top: 15%;
-*/
 }
 #projects-container {
 	width: 80%;
@@ -249,6 +260,7 @@ body {
 	background-position: center center;
     border-radius: 4px;
 }
+
 #placeholder {
     display: none;
 }
@@ -275,10 +287,12 @@ body {
 	text-align: center;
 	padding-top: 60%;
     transition: 0.5s linear all;
+    border-radius: 4px;
 }
 
 .project-boxes h3:hover {
 	background: rgba(0,0,0,0.95);
+    border-radius: 4px;
 	opacity: 1;
     transition: 0.1s linear all;
 }
@@ -294,15 +308,9 @@ body {
 #termproject {
 	background-image: url("images/112-termproject-homepage.png");
 }
-/*#avantegarde {
-	background-image: url("images/avantegarde-homepage.png");
-}*/
 #magazine {
 	background-image: url("images/unbounded-homepage.png");
 }
-/*#airbnb {
-	background-image: url("images/airbnb-homepage.png");
-}*/
 #hci-research {
 	background-image: url("images/ideagens-homepage.png");
 	background-size: fill;
@@ -372,7 +380,7 @@ body {
 	.social_icon img {
 		max-width: 3em;
 		max-height: 3em;
-	} 
+	}
 	.project-buttons-container {
 		display: none;
 	}
@@ -464,6 +472,9 @@ body {
     #icons {
         text-align: right;
     }
+    .down-arrow {
+        display: none;
+    }
 	.social_icon img {
 		max-width: 3em;
 		max-height: 3em;
@@ -549,6 +560,9 @@ body {
     #icons {
         display: inline;
     }
+    .down-arrow {
+        display: none;
+    }
     #projects-container {
         width: 80%;
     }
@@ -629,6 +643,9 @@ body {
 		max-width: 3em;
 		max-height: 3em;
 	} 
+    .down-arrow {
+        display: none;
+    }
 	#projects {
         width: 100%;
 		height: 100%;

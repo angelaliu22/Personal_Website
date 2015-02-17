@@ -97,6 +97,12 @@ header .back-button img{
 	margin: 0 auto;
 	padding-bottom: 1.25em;
 }
+.project-info a {
+    text-decoration: none;
+}
+.project-info a p {
+    margin-bottom: 1.5em;
+}
 .project-info p {
 	color: white;
     color: black;
@@ -126,10 +132,11 @@ header .back-button img{
 .project-description h3 {
 	padding-top: 1.5em;
 	padding-bottom: 0.6em;
-	font-weight: 300;
+	font-weight: 500;
 }
 .project-description p {
 	font-weight: 300;
+    line-height: 1.5;
 }
 .work-samples img{
 	width: 100%;

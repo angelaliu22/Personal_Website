@@ -1,7 +1,76 @@
-$("#Experience-link").click(function() {
-//    $('html, body').animate({ scrollTop: 500}, 500);
-//    $("#Experience-link").css({"border-bottom": "3px solid #f99926"});
+/*BEGINNING OF SCROLLING JS*/
+// Smooth scroll for in page links
+// Not my own code. Taken from:
+// Improved version (from one of the commenters) from Satyajit Sahoo
+// @see http://wibblystuff.blogspot.com.au/2014/04/in-page-smooth-scroll-using-css3.html
+// Changes:
+// - moved css transition detection outside of the event handler
+// - detect vertical scrolling value in all cases, not only when css transitions are supported
+// - optimise algorithm to determine the new vertical scrolling value
+
+$(function() {
+	var $window = $(window),
+		$document = $(document),
+		transitionSupported = typeof document.body.style.transitionProperty === 'string',
+		scrollTime = 1; // scroll time in seconds
+
+	$(".link-to-projects").on("click", function(e) {
+		var target,
+			avail,
+			scroll,
+			deltaScroll;
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			target = $(this.hash);
+			target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
+
+			if (target.length) {
+				avail = $document.height() - $window.height();
+
+				if (avail > 0) {
+					scroll = target.offset().top;
+					if (scroll > avail) {
+						scroll = avail;
+					}
+				} else {
+					scroll = 0;
+				}
+
+				deltaScroll = $window.scrollTop() - scroll;
+
+				// if we don't have to scroll because we're already at the right scrolling level, 
+				if (!deltaScroll) { // do nothing
+					return;
+				}
+
+				e.preventDefault();
+				if (transitionSupported) {
+					$("html").css({
+						"margin-top": deltaScroll + "px",
+						"transition": scrollTime + "s ease-in-out"
+					}).data("transitioning", scroll);
+				} else {
+					$("html, body").stop(true, true) // stop potential other jQuery animation (assuming we're the only one doing it)
+					.animate({
+						scrollTop: scroll + 'px'
+					}, scrollTime * 1000);
+					return;
+				}
+			}
+		}
+	});
+
+	if (transitionSupported) {
+		$("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function(e) {
+			var $this = $(this),
+				scroll = $this.data("transitioning");
+			if (e.target === e.currentTarget && scroll != null) {
+				$this.removeAttr("style").data("transitioning", null);
+				$("html, body").scrollTop(scroll);
+			}
+		});
+	}
 });
+/*END OF SCROLLING JS*/
 
 function clearAll() {
 //clear everything 
@@ -71,18 +140,18 @@ $("#Design-button").click(function() {
 
 });
 
-//$("#Research-button").click(function() {    
-//    clearAll();
-//    //orange border for button
-//    $("#Research-button").css({"border-bottom": "3px solid #f99926"});
-//    //make irrelevant ones disappear
-//    $('#enactus').css({display: "none"});
-//    $('#actnet').css({display: "none"});
-//    $('#magazine').css({display: "none"});
-//    $('#ooyala').css({display: "none"});
-//    $('#cisco').css({display: "none"});
-//    $('#IxDS-control-redesign').css({display: "none"});
-//    $('#fbi-redesign').css({display: "none"});
-//    $('#termproject').css({display: "none"});
-//});
+$("#Research-button").click(function() {    
+    clearAll();
+    //orange border for button
+    $("#Research-button").css({"border-bottom": "3px solid #f99926"});
+    //make irrelevant ones disappear
+    $('#enactus').css({display: "none"});
+    $('#actnet').css({display: "none"});
+    $('#magazine').css({display: "none"});
+    $('#ooyala').css({display: "none"});
+    $('#cisco').css({display: "none"});
+    $('#IxDS-control-redesign').css({display: "none"});
+    $('#fbi-redesign').css({display: "none"});
+    $('#termproject').css({display: "none"});
+});
 

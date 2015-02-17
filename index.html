@@ -19,17 +19,8 @@
 		ga('create', 'UA-54984819-1', 'auto');
 		ga('send', 'pageview');
 	</script>
-<!--
-	Scrolling 
-	<script src="http:/	/ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
-	<script src="jquery.localscroll.js" type="text/javascript"></script> 
-	<script src="jquery.scrollTo.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-	   		$('#links').localScroll({duration:800 target: "#linkexperience"});
-		});
-	</script>
--->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="index.js"></script>
 </head>
 <body>
     <div id = "above-fold">
@@ -41,7 +32,7 @@
             <div id="links">
                 <li><a href = "about.html">About</a></li>
                 <li> &nbsp&nbsp &nbsp&nbsp | &nbsp&nbsp &nbsp&nbsp</li>
-                <li id = "Experience-link"><a href = "#projects">Experience</a></li>
+                <li><a href = "#projects" class = "link-to-projects">Experience</a></li>
                 <li> &nbsp&nbsp &nbsp&nbsp| &nbsp&nbsp &nbsp&nbsp</li>
                 <li><a href="files/resume.pdf" target = "_blank">Resume</a></li>
             </div>
@@ -67,6 +58,9 @@
             </div>
         </div>
     </div>
+    <div class = "down-arrow">
+        <a href = "#projects" class = "link-to-projects"><img src = "images/down-arrow-black.png"></a>
+    </div>
     <div class = "clear"></div>
 	<div id="projects">
 		<div class = "sectional-container" id ="projects-container">
@@ -75,7 +69,6 @@
 					<button type="button" id = "All-button">All</button>
 					<button type="button" id = "Development-button">Development</button>
 					<button type="button" id = "Design-button">Design</button>
-<!--					<button type="button" id = "Research-button">Research</button>-->
 				</div>
 			</div>
 			<div class = "project-type">
@@ -194,10 +187,6 @@
     		</div>
     	</div>
 	</div>
-	<!--Source Scrollr.js
-	<script>window.jQuery || document.write("<script src="js/vendor/jquery-1.9.1.min.js></script></script>
-	<script src="js/skrollr.js"></script>-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>
 <footer>
