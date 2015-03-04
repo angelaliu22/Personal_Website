@@ -196,7 +196,7 @@ body {
 .down-arrow img {
     width: 100%;
     height: 100%;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 #projects{
 	width: 100%;
@@ -259,10 +259,6 @@ body {
    	background-size: cover;
 	background-position: center center;
     border-radius: 4px;
-}
-
-#placeholder {
-    display: none;
 }
 .project-boxes .view {
 	font-size: 0.8em;
@@ -336,6 +332,17 @@ body {
 	background-size: fill;
 	background-repeat: no-repeat;
 }
+#dashboardDesign {
+    background-image: url("images/Dashboard_dragonfly.png");
+	background-size: fill;
+	background-repeat: no-repeat;
+}
+#foodle {
+    background-image: url("images/Foodle1.png");
+	background-size: fill;
+	background-repeat: no-repeat;
+}
+
 .work-date {
 	font-size: 0.8em;
 }
@@ -384,7 +391,7 @@ body {
 	.project-buttons-container {
 		display: none;
 	}
-    #project {
+    #projects {
         height: 100%;
         width: 100%;
     }
@@ -451,16 +458,27 @@ body {
 }
 
 /*TABLET DEVICE OPTIMIZE*/
-@media only screen and (max-device-width: 768px) {
+@media only screen 
+and (min-device-width : 700px) 
+and (max-device-width : 1300px)
+and (orientation: landscape) {
 	body { 
-		font-size: 150%;
-        width: 100%;
+		font-size: 100%;
+        height: 100%;
 	}
     #left-side {
-        width: 75%;
+        width: 55%;
     }
     #links {
         top: 60%;
+    }
+    #name h1 {
+        font-size: 5em;
+    }
+    #name p {
+        color: white;
+        padding-left: 3em;
+        font-weight: 300;
     }
     #social {
         position: absolute;
@@ -472,96 +490,13 @@ body {
     #icons {
         text-align: right;
     }
-    .down-arrow {
-        display: none;
-    }
-	.social_icon img {
-		max-width: 3em;
-		max-height: 3em;
-	} 
-	.project-buttons-container {
-		display: none;
-	}
-    #project {
-        height: 100%;
-        width: 100%;
-    }
-    #project-container {
-        width: 100%;
-        height: 100%;
-    }
-    .project-boxes {
-        width: 80%;
-        height: 80%;
-        display: inline-block;
-    }
-    .project-boxes h3:hover {
-        background: transparent;
-        opacity: 0;
-    }
-    .nonhover-project-description {
-        display: inline;
-        width: 100%;
-        height: 25%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: rgba(0,0,0,0.8);
-    }
-    .nonhover-project-description h3 {
-        font-size: 1.3em;
-        font-weight: 400;
-        color: white;
-        height: 100px;
-        padding-top: 1em;
-    }
-    .nonhover-project-description .view {
-        font-size: 1em;
-        font-weight: 300;
-    }
-    #placeholder {
-        display: inline-block;
-    }
-    footer {
-        position: relative;
-        top: 50%;
-    }
-    #copyright {
-        position: relative;
-        top: 1em;
-    }
-	#copyright p {
-		color: black;
-		font-size: 1em;
-	}
-}
-
-/*PHONE DEVICE OPTIMIZE */
-@media only screen and (max-device-width: 500px) {
-	body { 
-		font-size: 200%;
-	}
-    #left-side {
-        width: 90%;
-    }
-    #name h1 {
-        font-size: 4em;
-    }
-    #name p {
-        color: black;
-        padding-left: 3em;
-        font-weight: 300;
-    }
     #social {
         width: 90%;
         height: 10em;
-        top: 70%;
+        top: 37%;
     }
     #icons {
         display: inline;
-    }
-    .down-arrow {
-        display: none;
     }
     #projects-container {
         width: 80%;
@@ -576,7 +511,7 @@ body {
         opacity: 0;
     }
     .nonhover-project-description {
-        display: inline;
+/*        display: inline;*/
         width: 100%;
         height: 30%;
         position: absolute;
@@ -600,10 +535,154 @@ body {
         display: none;
     }
     #copyright {
-        position: absolute;
-        top: 110em;
+        position: relative;
         left: 0;
         right: 0;
+        bottom: 1em;
+    }
+    #copyright p {
+        color: black;
+    }
+}
+
+@media only screen 
+and (min-device-width : 700px) 
+and (max-device-width : 1300px)
+and (orientation: portrait) {
+    body { 
+		font-size: 130%;
+        height: 100%;
+	}
+    #left-side {
+        width: 75%;
+    }
+    #links {
+        top: 55%;
+    }
+    #name h1 {
+        font-size: 5em;
+    }
+    #name p {
+        color: white;
+        padding-left: 3em;
+        font-weight: 300;
+    }
+    #social {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        float: none;
+        width: 75%;
+    }
+    #social {
+        width: 100%;
+        height: 11em;
+        top: 60%;
+    }
+    #icons {
+        display: inline;
+        text-align: center;
+    }
+    #projects-container {
+        width: 85%;
+    }
+    .project-boxes {
+        width: 18em;
+        height: 18em;
+        display: inline-block;
+    }
+}
+
+/*PHONE DEVICE OPTIMIZE */
+@media only screen and (max-device-width: 500px) {
+	body { 
+		font-size: 200%;
+	}
+    #left-side {
+        width: 90%;
+    }
+    #name h1 {
+        font-size: 4em;
+        position: absolute;
+        top: 25%;
+    }
+    #name p {
+        color: black;
+        padding-left: 3em;
+        font-weight: 300;
+        position: absolute;
+        top: 35%;
+    }
+    #links {
+        position: absolute;
+        top: 50%;
+    }
+    #social {
+        position: absolute;
+        top: 60%;
+        left: 0;
+        float: none;
+        width: 75%;
+    }
+    #social {
+        width: 100%;
+        height: 11em;
+        top: 60%;
+    }
+    #icons {
+        display: inline;
+        text-align: center;
+    }
+    .project-buttons-container {
+        display: none;
+    }
+    .project-buttons {
+        width: 100%;
+    }
+    #projects-container {
+        width: 90%;
+    }
+    .project-boxes {
+        width: 12em;
+        height: 12em;
+        display: inline-block;
+        text-align: center;
+    }
+    .project-boxes h3:hover {
+        background: transparent;
+        opacity: 0;
+    }
+/*
+    .nonhover-project-description {
+        display: inline;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+    }
+    .nonhover-project-description h3 {
+        font-size: 1.3em;
+        font-weight: 400;
+        color: white;
+        height: 100px;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+    }
+    .nonhover-project-description .view {
+        font-size: 0.9em;
+        font-weight: 300;
+    }
+*/
+    #placeholder {
+        display: none;
+    }
+    #copyright {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
     #copyright p {
         color: black;
