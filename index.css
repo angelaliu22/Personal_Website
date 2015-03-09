@@ -342,6 +342,16 @@ body {
 	background-size: fill;
 	background-repeat: no-repeat;
 }
+#DesigningForFocus {
+    background-image: url("images/DesigningForFocus_icon.png");
+	background-size: fill;
+	background-repeat: no-repeat;
+}
+#LeakDetector {
+    background-image: url("images/LeakDetector_icon.png");
+	background-size: fill;
+	background-repeat: no-repeat;
+}
 
 .work-date {
 	font-size: 0.8em;

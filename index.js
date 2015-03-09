@@ -101,6 +101,10 @@ function clearAll() {
     $('#dashboardDesign').css({"border-width": "1px"});
     $('#foodle').css({"border-color": "black"});
     $('#foodle').css({"border-width": "1px"});
+    $('#DesigningForFocus').css({"border-color": "black"});
+    $('#DesigningForFocus').css({"border-width": "1px"});
+    $('#LeakDetector').css({"border-color": "black"});
+    $('#LeakDetector').css({"border-width": "1px"});
 
     //bring all elements back
     $('#enactus').css({display: "inline-block"});
@@ -114,6 +118,8 @@ function clearAll() {
     $('#termproject').css({display: "inline-block"});
     $('#dashboardDesign').css({display: "inline-block"});
     $('#foodle').css({display: "inline-block"});
+    $('#DesigningForFocus').css({display: "inline-block"});
+    $('#LeakDetector').css({display: "inline-block"});
 }
 
 $("#All-button").click(function() {
@@ -132,6 +138,8 @@ $("#Development-button").click(function() {
     $('#IxDS-control-redesign').css({display: "none"});
     $('#fbi-redesign').css({display: "none"});
     $('#dashboardDesign').css({display: "none"});
+    $('#LeakDetector').css({display: "none"});
+    $('#DesigningForFocus').css({display: "none"});
 });
 
 $("#Design-button").click(function() {   
